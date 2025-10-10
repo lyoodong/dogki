@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TextListView: View {
+struct TestListView: View {
     @State var items: [Item] = load("test.json")
 
     var body: some View {

@@ -12,7 +12,7 @@
 		BEB434082E98A7A400756E07 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FE2E98A7A400756E07 /* Domain.swift */; };
 		BEB434092E98A7A400756E07 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FF2E98A7A400756E07 /* Month.swift */; };
 		BEB4340A2E98A7A400756E07 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434002E98A7A400756E07 /* Item.swift */; };
-		BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434032E98A7A400756E07 /* TextListView.swift */; };
+		BEB4340B2E98A7A400756E07 /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434032E98A7A400756E07 /* TestListView.swift */; };
 		BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4340C2E98AB6C00756E07 /* Category.swift */; };
 		BEB434132E98AF5E00756E07 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB434122E98AF5E00756E07 /* test.json */; };
 		BEB434152E98AF6A00756E07 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434142E98AF6A00756E07 /* Load.swift */; };
@@ -25,7 +25,7 @@
 		BEB433FE2E98A7A400756E07 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		BEB433FF2E98A7A400756E07 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		BEB434002E98A7A400756E07 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		BEB434032E98A7A400756E07 /* TextListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListView.swift; sourceTree = "<group>"; };
+		BEB434032E98A7A400756E07 /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
 		BEB4340C2E98AB6C00756E07 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BEB434122E98AF5E00756E07 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		BEB434142E98AF6A00756E07 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		BEB434022E98A7A400756E07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BEB434032E98A7A400756E07 /* TextListView.swift */,
+				BEB434032E98A7A400756E07 /* TestListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
 				BEB434092E98A7A400756E07 /* Month.swift in Sources */,
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
-				BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */,
+				BEB4340B2E98A7A400756E07 /* TestListView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
 				BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */,
 			);
