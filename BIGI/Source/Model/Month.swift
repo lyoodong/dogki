@@ -1,9 +1,9 @@
 import Foundation
 
-enum ExamMonth: Int, CaseIterable, CustomStringConvertible {
-    case june = 6
-    case september = 9
-    case november = 11
+enum Month: String, CaseIterable, CustomStringConvertible, Decodable {
+    case june
+    case september
+    case november
 
     var description: String {
         switch self {

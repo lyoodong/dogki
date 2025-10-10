@@ -1,18 +1,26 @@
 import Foundation
 
-struct Item: Identifiable, Hashable {
-    let id = UUID()
+struct Item: Decodable, Hashable {
     let title: String
     let year: Int
-    let month: ExamMonth
+    let month: Month
     let domains: [Domain]
-
+    let type: Category?
+    
     var subtitle: String {
         switch month {
         case .november:
-            return "\(year)학년도 수능"
+            if let type = type {
+                return "\(year)학년도 수능 \(type.description)형"
+            } else {
+                return "\(year)학년도 수능"
+            }
         case .june, .september:
-            return "\(year)학년도 \(month.description) 평가원"
+            if let type = type {
+                return "\(year)학년도 \(month.description) 평가원 \(type.description)형"
+            } else {
+                return "\(year)학년도 \(month.description) 평가원"
+            }
         }
     }
 }

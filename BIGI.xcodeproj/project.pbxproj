@@ -10,9 +10,12 @@
 		BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB433FB2E98A7A400756E07 /* Assets.xcassets */; };
 		BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FC2E98A7A400756E07 /* BIGIApp.swift */; };
 		BEB434082E98A7A400756E07 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FE2E98A7A400756E07 /* Domain.swift */; };
-		BEB434092E98A7A400756E07 /* ExamMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FF2E98A7A400756E07 /* ExamMonth.swift */; };
+		BEB434092E98A7A400756E07 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FF2E98A7A400756E07 /* Month.swift */; };
 		BEB4340A2E98A7A400756E07 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434002E98A7A400756E07 /* Item.swift */; };
 		BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434032E98A7A400756E07 /* TextListView.swift */; };
+		BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4340C2E98AB6C00756E07 /* Category.swift */; };
+		BEB434132E98AF5E00756E07 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = BEB434122E98AF5E00756E07 /* test.json */; };
+		BEB434152E98AF6A00756E07 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434142E98AF6A00756E07 /* Load.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +23,12 @@
 		BEB433FB2E98A7A400756E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB433FC2E98A7A400756E07 /* BIGIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIGIApp.swift; sourceTree = "<group>"; };
 		BEB433FE2E98A7A400756E07 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		BEB433FF2E98A7A400756E07 /* ExamMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMonth.swift; sourceTree = "<group>"; };
+		BEB433FF2E98A7A400756E07 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		BEB434002E98A7A400756E07 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BEB434032E98A7A400756E07 /* TextListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListView.swift; sourceTree = "<group>"; };
+		BEB4340C2E98AB6C00756E07 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BEB434122E98AF5E00756E07 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		BEB434142E98AF6A00756E07 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		BEB433FD2E98A7A400756E07 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BEB434122E98AF5E00756E07 /* test.json */,
 				BEB433FB2E98A7A400756E07 /* Assets.xcassets */,
 				BEB433FC2E98A7A400756E07 /* BIGIApp.swift */,
 			);
@@ -65,7 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				BEB433FE2E98A7A400756E07 /* Domain.swift */,
-				BEB433FF2E98A7A400756E07 /* ExamMonth.swift */,
+				BEB433FF2E98A7A400756E07 /* Month.swift */,
+				BEB4340C2E98AB6C00756E07 /* Category.swift */,
 				BEB434002E98A7A400756E07 /* Item.swift */,
 			);
 			path = Model;
@@ -74,6 +82,7 @@
 		BEB434022E98A7A400756E07 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BEB434032E98A7A400756E07 /* TextListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -81,9 +90,9 @@
 		BEB434042E98A7A400756E07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BEB434112E98ACE000756E07 /* Data */,
 				BEB434012E98A7A400756E07 /* Model */,
 				BEB434022E98A7A400756E07 /* View */,
-				BEB434032E98A7A400756E07 /* TextListView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -95,6 +104,14 @@
 				BEB434042E98A7A400756E07 /* Source */,
 			);
 			path = BIGI;
+			sourceTree = "<group>";
+		};
+		BEB434112E98ACE000756E07 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEB434142E98AF6A00756E07 /* Load.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */,
+				BEB434132E98AF5E00756E07 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,9 +189,11 @@
 			files = (
 				BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */,
 				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
-				BEB434092E98A7A400756E07 /* ExamMonth.swift in Sources */,
+				BEB434092E98A7A400756E07 /* Month.swift in Sources */,
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */,
+				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
+				BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

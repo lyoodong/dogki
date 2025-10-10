@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum Domain: CaseIterable, CustomStringConvertible {
+enum Domain: String, CaseIterable, CustomStringConvertible, Decodable {
     case humanities
     case social
     case technology
