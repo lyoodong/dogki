@@ -10,11 +10,20 @@ struct TextListView: View {
                 banner()
             }
             .ignoresSafeArea(.all, edges: .bottom)
+            .toolbar(content: toolbarContent)
         }
         .onAppear {
             items.sort { $0.year > $1.year }
         }
         
+    }
+    
+    private func toolbarContent () -> some View {
+        Button {
+            print("필터 액션")
+        } label: {
+            Image(systemName: "line.3.horizontal.decrease.circle")
+        }
     }
     
     private func list(_ items: [Item]) -> some View {
