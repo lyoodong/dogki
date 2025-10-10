@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE90F2972E98F15D000EC35C /* TestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90F2962E98F15D000EC35C /* TestListViewModel.swift */; };
 		BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB433FB2E98A7A400756E07 /* Assets.xcassets */; };
 		BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FC2E98A7A400756E07 /* BIGIApp.swift */; };
 		BEB434082E98A7A400756E07 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FE2E98A7A400756E07 /* Domain.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE90F2962E98F15D000EC35C /* TestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewModel.swift; sourceTree = "<group>"; };
 		BEB433FB2E98A7A400756E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB433FC2E98A7A400756E07 /* BIGIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIGIApp.swift; sourceTree = "<group>"; };
 		BEB433FE2E98A7A400756E07 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB434032E98A7A400756E07 /* TestListView.swift */,
+				BE90F2962E98F15D000EC35C /* TestListViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */,
 				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
+				BE90F2972E98F15D000EC35C /* TestListViewModel.swift in Sources */,
 				BEB434092E98A7A400756E07 /* Month.swift in Sources */,
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BEB4340B2E98A7A400756E07 /* TestListView.swift in Sources */,
