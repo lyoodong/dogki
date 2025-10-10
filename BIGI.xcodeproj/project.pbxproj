@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB433FB2E98A7A400756E07 /* Assets.xcassets */; };
+		BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FC2E98A7A400756E07 /* BIGIApp.swift */; };
+		BEB434082E98A7A400756E07 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FE2E98A7A400756E07 /* Domain.swift */; };
+		BEB434092E98A7A400756E07 /* ExamMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FF2E98A7A400756E07 /* ExamMonth.swift */; };
+		BEB4340A2E98A7A400756E07 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434002E98A7A400756E07 /* Item.swift */; };
+		BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434032E98A7A400756E07 /* TextListView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB433FB2E98A7A400756E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEB433FC2E98A7A400756E07 /* BIGIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIGIApp.swift; sourceTree = "<group>"; };
+		BEB433FE2E98A7A400756E07 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		BEB433FF2E98A7A400756E07 /* ExamMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMonth.swift; sourceTree = "<group>"; };
+		BEB434002E98A7A400756E07 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BEB434032E98A7A400756E07 /* TextListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BE5DAFE02E97C1BF00FFFACB /* BIGI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BIGI;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BE5DAFDB2E97C1BF00FFFACB /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		BE5DAFD52E97C1BF00FFFACB = {
 			isa = PBXGroup;
 			children = (
-				BE5DAFE02E97C1BF00FFFACB /* BIGI */,
+				BEB434052E98A7A400756E07 /* BIGI */,
 				BE5DAFDF2E97C1BF00FFFACB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,51 @@
 				BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BEB433FD2E98A7A400756E07 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BEB433FB2E98A7A400756E07 /* Assets.xcassets */,
+				BEB433FC2E98A7A400756E07 /* BIGIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BEB434012E98A7A400756E07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEB433FE2E98A7A400756E07 /* Domain.swift */,
+				BEB433FF2E98A7A400756E07 /* ExamMonth.swift */,
+				BEB434002E98A7A400756E07 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEB434022E98A7A400756E07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEB434042E98A7A400756E07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BEB434012E98A7A400756E07 /* Model */,
+				BEB434022E98A7A400756E07 /* View */,
+				BEB434032E98A7A400756E07 /* TextListView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BEB434052E98A7A400756E07 /* BIGI */ = {
+			isa = PBXGroup;
+			children = (
+				BEB433FD2E98A7A400756E07 /* App */,
+				BEB434042E98A7A400756E07 /* Source */,
+			);
+			path = BIGI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +111,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				BE5DAFE02E97C1BF00FFFACB /* BIGI */,
 			);
 			name = BIGI;
 			packageProductDependencies = (
@@ -109,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */,
+				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
+				BEB434092E98A7A400756E07 /* ExamMonth.swift in Sources */,
+				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
+				BEB4340B2E98A7A400756E07 /* TextListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
