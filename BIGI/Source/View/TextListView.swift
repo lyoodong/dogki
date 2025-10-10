@@ -5,14 +5,28 @@ struct TextListView: View {
 
     var body: some View {
         NavigationStack {
-            List(items, id: \.self, rowContent: rowContent)
-                .listStyle(.plain)
-                .navigationTitle("기출 문제")
+            VStack {
+                list(items)
+                banner()
+            }
+            .ignoresSafeArea(.all, edges: .bottom)
         }
         .onAppear {
             items.sort { $0.year > $1.year }
         }
         
+    }
+    
+    private func list(_ items: [Item]) -> some View {
+        List(items, id: \.self, rowContent: rowContent)
+            .listStyle(.plain)
+            .navigationTitle("기출 문제")
+    }
+    
+    private func banner() -> some View {
+        Rectangle()
+            .fill(.blue)
+            .frame(height: 52)
     }
     
     private func rowContent(_ item: Item) -> some View {
