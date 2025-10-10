@@ -58,16 +58,20 @@ struct TestListView: View {
             .font(.subheadline)
     }
     
-    private func domains(_ domains: [Domain]) -> some View {
+    private func domains(_ domains: [Domain]) -> some View {        
         HStack {
             ForEach(domains, id: \.self) { domain in
-                Text(domain.description)
-                    .font(.caption)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 3)
-                    .background(domain.color.opacity(0.15))
-                    .foregroundColor(domain.color)
-                    .cornerRadius(6)
+                HStack(spacing: 4) {
+                    Image(systemName: "folder.fill")
+                        .imageScale(.small)
+                    Text(domain.description)
+                }
+                .font(.caption)
+                .padding(.horizontal, 6)
+                .padding(.vertical, 3)
+                .background(domain.color.opacity(0.15))
+                .foregroundStyle(domain.color)
+                .cornerRadius(6)
             }
         }
     }

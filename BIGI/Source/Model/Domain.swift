@@ -7,7 +7,7 @@ enum Domain: String, CaseIterable, CustomStringConvertible, Decodable {
     case science
     case reading
     case arts
-
+    
     var description: String {
         switch self {
         case .humanities: return "인문"
@@ -18,7 +18,7 @@ enum Domain: String, CaseIterable, CustomStringConvertible, Decodable {
         case .arts: return "예술"
         }
     }
-
+    
     var color: Color {
         switch self {
         case .humanities: return .red
@@ -26,7 +26,7 @@ enum Domain: String, CaseIterable, CustomStringConvertible, Decodable {
         case .technology: return .blue
         case .science: return .green
         case .reading: return .purple
-        case .arts: return .pink
+        case .arts: return .cyan
         }
     }
 }
