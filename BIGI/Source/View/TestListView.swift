@@ -1,4 +1,5 @@
 import SwiftUI
+import PDFKit
 
 struct TestListView: View {
     @State var items: [Item] = load("test.json")
@@ -40,14 +41,25 @@ struct TestListView: View {
     
     private func rowContent(_ item: Item) -> some View {
         HStack(alignment: .center) {
-            VStack(alignment: .leading, spacing: 6) {
-                subHeadLine(item)
-                headLine(item)
-            }
-            
+            thumbnailImage(for: item)
+            infoText(for: item)
             Spacer(minLength: 12)
-            
             shareButton(for: item)
+        }
+    }
+    
+    @ViewBuilder
+    private func thumbnailImage(for item: Item) -> some View {
+        if let pdfURL = bundlePDFURL(named: "20260902") {
+            TestListPDFPreView(url: pdfURL)
+                .frame(width: 40)
+        }
+    }
+    
+    private func infoText(for item: Item) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            subHeadLine(item)
+            headLine(item)
         }
     }
     
@@ -103,4 +115,3 @@ struct TestListView: View {
             .background(Material.ultraThin, in: Circle())
     }
 }
-
