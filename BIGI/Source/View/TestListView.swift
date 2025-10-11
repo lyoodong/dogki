@@ -52,7 +52,8 @@ struct TestListView: View {
     private func thumbnailImage(for item: Item) -> some View {
         if let pdfURL = bundleUrl(for: "20260902", with: "pdf"){
             TestListPDFPreView(url: pdfURL)
-                .frame(width: 40)
+                .frame(width: 32)
+                .cornerRadius(4)
         }
     }
     
