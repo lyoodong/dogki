@@ -50,7 +50,7 @@ struct TestListView: View {
     
     @ViewBuilder
     private func thumbnailImage(for item: Item) -> some View {
-        if let pdfURL = bundlePDFURL(named: "20260902") {
+        if let pdfURL = bundleUrl(for: "20260902", with: "pdf"){
             TestListPDFPreView(url: pdfURL)
                 .frame(width: 40)
         }
@@ -101,8 +101,8 @@ struct TestListView: View {
     
     @ViewBuilder
     private func shareButton(for item: Item) -> some View {
-        if let itemUrl = bundlePDFURL(named: "20260902") {
-            ShareLink(item: itemUrl, label: shareLinkLabel)
+        if let pdfURL = bundleUrl(for: "20260902", with: "pdf"){
+            ShareLink(item: pdfURL, label: shareLinkLabel)
                 .buttonStyle(.plain)
         }
     }
