@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TestListView: View {
     @State var items: [Item] = load("test.json")
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -15,7 +15,6 @@ struct TestListView: View {
         .onAppear {
             items.sort { $0.year > $1.year }
         }
-        
     }
     
     private func toolbarContent () -> some View {
@@ -23,9 +22,10 @@ struct TestListView: View {
             print("필터 액션")
         } label: {
             Image(systemName: "line.3.horizontal.decrease.circle")
+                .foregroundStyle(.blue)
         }
     }
-    
+
     private func list(_ items: [Item]) -> some View {
         List(items, id: \.self, rowContent: rowContent)
             .listStyle(.plain)
@@ -39,9 +39,15 @@ struct TestListView: View {
     }
     
     private func rowContent(_ item: Item) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            subHeadLine(item)
-            headLine(item)
+        HStack(alignment: .center) {
+            VStack(alignment: .leading, spacing: 6) {
+                subHeadLine(item)
+                headLine(item)
+            }
+            
+            Spacer(minLength: 12)
+            
+            shareButton(for: item)
         }
     }
     
@@ -58,7 +64,7 @@ struct TestListView: View {
             .font(.subheadline)
     }
     
-    private func domains(_ domains: [Domain]) -> some View {        
+    private func domains(_ domains: [Domain]) -> some View {
         HStack {
             ForEach(domains, id: \.self) { domain in
                 HStack(spacing: 4) {
@@ -80,4 +86,21 @@ struct TestListView: View {
         Text(item.title)
             .font(.headline)
     }
+    
+    @ViewBuilder
+    private func shareButton(for item: Item) -> some View {
+        if let itemUrl = bundlePDFURL(named: "20260902") {
+            ShareLink(item: itemUrl, label: shareLinkLabel)
+                .buttonStyle(.plain)
+        }
+    }
+    
+    private func shareLinkLabel() -> some View {
+        Image(systemName: "square.and.arrow.up")
+            .imageScale(.medium)
+            .foregroundStyle(.blue)
+            .frame(width: 40, height: 40)
+            .background(Material.ultraThin, in: Circle())
+    }
 }
+

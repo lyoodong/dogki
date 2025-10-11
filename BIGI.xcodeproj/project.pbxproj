@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE40A6EC2E9A752F005997BF /* 20260902.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE40A6EB2E9A752F005997BF /* 20260902.pdf */; };
 		BE90F2972E98F15D000EC35C /* TestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90F2962E98F15D000EC35C /* TestListViewModel.swift */; };
 		BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB433FB2E98A7A400756E07 /* Assets.xcassets */; };
 		BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB433FC2E98A7A400756E07 /* BIGIApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE40A6EB2E9A752F005997BF /* 20260902.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20260902.pdf; sourceTree = "<group>"; };
 		BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE90F2962E98F15D000EC35C /* TestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewModel.swift; sourceTree = "<group>"; };
 		BEB433FB2E98A7A400756E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		BEB433FD2E98A7A400756E07 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BE40A6EB2E9A752F005997BF /* 20260902.pdf */,
 				BEB434122E98AF5E00756E07 /* test.json */,
 				BEB433FB2E98A7A400756E07 /* Assets.xcassets */,
 				BEB433FC2E98A7A400756E07 /* BIGIApp.swift */,
@@ -180,6 +183,7 @@
 			files = (
 				BEB434062E98A7A400756E07 /* Assets.xcassets in Resources */,
 				BEB434132E98AF5E00756E07 /* test.json in Resources */,
+				BE40A6EC2E9A752F005997BF /* 20260902.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,3 +21,7 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+func bundlePDFURL(named name: String) -> URL? {
+    Bundle.main.url(forResource: name, withExtension: "pdf")
+}
