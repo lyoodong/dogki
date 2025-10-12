@@ -52,7 +52,7 @@ struct TestListView: View {
     @ViewBuilder
     private func thumbnailImage(for item: Item) -> some View {
         if let pdfURL = bundleUrl(for: item.id, with: "pdf") {
-            TestListPDFPreView(url: pdfURL)
+            TestDFThumbnailView(url: pdfURL)
                 .frame(width: 48, height: 64)
                 .cornerRadius(4)
         }
@@ -121,7 +121,7 @@ struct TestListView: View {
     @ViewBuilder
     private func sheetContent(for item: Item) -> some View {
         if let url = bundleUrl(for: item.id, with: "pdf") {
-            TestPDFView(for: url)
+            TestPDFPreView(for: url)
         } else {
             Text("PDF를 찾을 수 없습니다.")
         }

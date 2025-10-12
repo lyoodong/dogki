@@ -17,7 +17,7 @@ struct PDFRepresentableView: UIViewRepresentable {
     func updateUIView(_ uiView: PDFView, context: Context) {}
 }
 
-struct TestPDFView: View {
+struct TestPDFPreView: View {
     @Environment(\.dismiss) private var dismiss
     let url: URL
     
@@ -28,7 +28,7 @@ struct TestPDFView: View {
     var body: some View {
         NavigationStack {
             PDFRepresentableView(url: url)
-                .navigationTitle("PDF 미리보기")
+                .navigationTitle("미리보기")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar(content: toolBarContent)
         }

@@ -1,7 +1,7 @@
 import SwiftUI
 import PDFKit
 
-struct TestListPDFPreView: View {
+struct TestDFThumbnailView: View {
     let url: URL
     @State private var thumbnail: UIImage?
 
