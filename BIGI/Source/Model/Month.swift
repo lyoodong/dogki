@@ -1,8 +1,8 @@
 import Foundation
 
 enum Month: Int, CaseIterable, CustomStringConvertible, Decodable {
-    case june = 06
-    case september = 09
+    case june = 6
+    case september = 9
     case november = 11
 
     var description: String {

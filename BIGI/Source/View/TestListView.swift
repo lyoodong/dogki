@@ -3,24 +3,41 @@ import SwiftUI
 struct TestListView: View {
     @State private var items: [Item] = load("test.json")
     @State private var selectedItem: Item?
+    @State private var selectedDomains: Set<Domain> = Set(Domain.allCases)
+    @State private var isPresented: Bool = false
+    
+    private var displayItems: [Item] {
+        return items.filter { item in
+            !Set(item.domains).isDisjoint(with: selectedDomains)
+        }
+    }
 
     var body: some View {
         NavigationStack {
             VStack {
-                list(items)
+                if displayItems.isEmpty {
+                    EmptyListView()
+                } else {
+                    list(displayItems)
+                }
+                
                 banner()
             }
+            .animation(.default, value: displayItems)
             .ignoresSafeArea(.all, edges: .bottom)
             .toolbar(content: toolbarContent)
+            .navigationTitle("기출 문제")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .sheet(item: $selectedItem, content: sheetContent)
+        .sheet(isPresented: $isPresented, content: filterSheetContent)
     }
 
     private func toolbarContent () -> some View {
         Button {
-            print("필터 액션")
+            isPresented = true
         } label: {
-            Image(systemName: "line.3.horizontal.decrease.circle")
+            Image(systemName: "line.3.horizontal.decrease")
                 .foregroundStyle(.blue)
         }
     }
@@ -28,7 +45,6 @@ struct TestListView: View {
     private func list(_ items: [Item]) -> some View {
         List(items, id: \.self, rowContent: rowContent)
             .listStyle(.plain)
-            .navigationTitle("기출 문제")
     }
 
     private func banner() -> some View {
@@ -81,16 +97,13 @@ struct TestListView: View {
     private func domains(_ domains: [Domain]) -> some View {
         HStack(spacing: 6) {
             ForEach(domains, id: \.self) { domain in
-                HStack(spacing: 4) {
-                    Image(systemName: "folder.fill").imageScale(.small)
-                    Text(domain.description)
-                }
-                .font(.caption)
-                .padding(.horizontal, 6)
-                .padding(.vertical, 3)
-                .background(domain.color.opacity(0.15))
-                .foregroundStyle(domain.color)
-                .cornerRadius(6)
+                Text(domain.description)
+                    .font(.caption)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 3)
+                    .background(domain.color.opacity(0.15))
+                    .foregroundStyle(domain.color)
+                    .cornerRadius(6)
             }
         }
     }
@@ -125,5 +138,27 @@ struct TestListView: View {
         } else {
             Text("PDF를 찾을 수 없습니다.")
         }
+    }
+    
+    private func filterSheetContent() -> some View {
+        TestFilter(selectedDomains: $selectedDomains)
+    }
+}
+
+struct EmptyListView: View {
+    var message: String = "문제가 없습니다"
+    
+    var body: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 40))
+                .foregroundColor(.blue.opacity(0.8))
+            
+            Text(message)
+                .font(.headline)
+                .foregroundColor(.secondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGroupedBackground))
     }
 }
