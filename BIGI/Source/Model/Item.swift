@@ -1,6 +1,6 @@
 import Foundation
 
-struct Item: Decodable, Hashable {
+struct Item: Decodable, Hashable, Identifiable {
     let title: String
     let year: Int
     let month: Month
@@ -25,7 +25,7 @@ struct Item: Decodable, Hashable {
         }
     }
     
-    var fileName: String {
+    var id: String {
         let mm = String(format: "%02d", month.rawValue)
         let nn = String(format: "%02d", number)
         return "\(year)\(mm)\(nn)"
