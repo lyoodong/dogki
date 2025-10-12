@@ -1,184 +1,587 @@
 [
-  { "title": "작가주의 비평", "year": 2015, "month": "june", "domains": ["arts"] },
-  { "title": "3가지 조명 기구", "year": 2015, "month": "june", "domains": ["technology"], "type": "A" },
-  { "title": "고고학의 여러 이론", "year": 2015, "month": "june", "domains": ["humanities"], "type": "A" },
-  { "title": "우유 열처리법", "year": 2015, "month": "june", "domains": ["science"], "type": "A" },
-  { "title": "인센티브 계약", "year": 2015, "month": "june", "domains": ["social"], "type": "A" },
-  { "title": "정합설", "year": 2015, "month": "june", "domains": ["humanities"], "type": "B" },
-  { "title": "별의 밝기", "year": 2015, "month": "june", "domains": ["science"], "type": "B" },
-  { "title": "광고 규제 (책임자: 소비자 vs 기업)", "year": 2015, "month": "june", "domains": ["social"], "type": "B" },
-
-  { "title": "후각의 작동 원리", "year": 2015, "month": "september", "domains": ["science"], "type": "A" },
-  { "title": "CPU 스케줄링", "year": 2015, "month": "september", "domains": ["technology"], "type": "A" },
-  { "title": "추사 김정희의 예술 세계", "year": 2015, "month": "september", "domains": ["arts"] },
-  { "title": "그로티우스의 자연법 사상", "year": 2015, "month": "september", "domains": ["social"], "type": "A" },
-  { "title": "맹자의 '의' 사상", "year": 2015, "month": "september", "domains": ["humanities"], "type": "B" },
-  { "title": "정책 결정과 주민 참여 제도", "year": 2015, "month": "september", "domains": ["social"], "type": "B" },
-  { "title": "점탄성", "year": 2015, "month": "september", "domains": ["science"], "type": "B" },
-
-  { "title": "단백질의 합성·분해와 필수아미노산", "year": 2015, "month": "november", "domains": ["science"], "type": "A" },
-  { "title": "디지털 영상의 확대와 축소의 원리", "year": 2015, "month": "november", "domains": ["technology"], "type": "A" },
-  { "title": "공공 서비스", "year": 2015, "month": "november", "domains": ["social"], "type": "A" },
-  { "title": "칸트의 취미 판단 이론", "year": 2015, "month": "november", "domains": ["arts"] },
-  { "title": "신채호의 '아' 사상", "year": 2015, "month": "november", "domains": ["humanities"], "type": "B" },
-  { "title": "헤겔과 뒤르켐의 사회 이론", "year": 2015, "month": "november", "domains": ["social"], "type": "B" },
-  { "title": "슈퍼문과 타원 궤도", "year": 2015, "month": "november", "domains": ["science"], "type": "B" },
-
-  { "title": "지문 인식 시스템", "year": 2016, "month": "june", "domains": ["technology"], "type": "A" },
-  { "title": "원자의 구성 요소의 발견 과정", "year": 2016, "month": "june", "domains": ["science"], "type": "A" },
-  { "title": "메타 윤리학: 도덕 실재론과 정서주의", "year": 2016, "month": "june", "domains": ["humanities"], "type": "A" },
-  { "title": "징벌적 손해 배상 제도", "year": 2016, "month": "june", "domains": ["social"] },
-  { "title": "장자의 호접몽과 물아일체 사상", "year": 2016, "month": "june", "domains": ["humanities"], "type": "B" },
-  { "title": "현대의 개체화 현상에 대한 두 학자의 견해", "year": 2016, "month": "june", "domains": ["social"], "type": "B" },
-  { "title": "우주 암흑 물질의 규명 과정", "year": 2016, "month": "june", "domains": ["science"], "type": "B" },
-
-  { "title": "해시 함수", "year": 2016, "month": "september", "domains": ["technology"], "type": "A" },
-  { "title": "지방질의 산패", "year": 2016, "month": "september", "domains": ["science"], "type": "A" },
-  { "title": "경쟁 정책과 소비자 정책", "year": 2016, "month": "september", "domains": ["social"], "type": "A" },
-  { "title": "회화주의 사진", "year": 2016, "month": "september", "domains": ["arts"] },
-  { "title": "헴펠과 샐먼의 설명 이론", "year": 2016, "month": "september", "domains": ["humanities"], "type": "B" },
-  { "title": "사색적 삶과 활동적 삶", "year": 2016, "month": "september", "domains": ["social"], "type": "B" },
-  { "title": "항암제", "year": 2016, "month": "september", "domains": ["science"], "type": "B" },
-
-  { "title": "돌림힘", "year": 2016, "month": "november", "domains": ["science"], "type": "A" },
-  { "title": "애벌랜치 광다이오드", "year": 2016, "month": "november", "domains": ["technology"], "type": "A" },
-  { "title": "귀납에 내재된 논리적 한계", "year": 2016, "month": "november", "domains": ["humanities"], "type": "A" },
-  { "title": "부관의 법률적 효력(기판력)", "year": 2016, "month": "november", "domains": ["social"] },
-  { "title": "도덕적 운과 도덕적 평가", "year": 2016, "month": "november", "domains": ["humanities"], "type": "B" },
-  { "title": "지식 경영론", "year": 2016, "month": "november", "domains": ["social"], "type": "B" },
-  { "title": "빗방울의 종단 속도", "year": 2016, "month": "november", "domains": ["science"], "type": "B" },
-
-  { "title": "인공 신경망 기술", "year": 2017, "month": "june", "domains": ["technology"] },
-  { "title": "동물 실험과 유비 논증", "year": 2017, "month": "june", "domains": ["humanities"] },
-  { "title": "음악의 과학적 요소와 음악적 요소", "year": 2017, "month": "june", "domains": ["science", "arts"] },
-
-  { "title": "콘크리트의 발전과 근대 건축에서의 예술적 적용", "year": 2017, "month": "september", "domains": ["technology", "arts"] },
-  { "title": "칼로릭 이론과 열기관의 열효율 문제", "year": 2017, "month": "september", "domains": ["science"] },
-  { "title": "사단법인", "year": 2017, "month": "september", "domains": ["social"] },
-
-  { "title": "총체주의", "year": 2017, "month": "november", "domains": ["humanities"] },
-  { "title": "반추 동물의 탄수화물 이용", "year": 2017, "month": "november", "domains": ["science"] },
-  { "title": "보험(경제적/법률적 접근)", "year": 2017, "month": "november", "domains": ["social"] },
-
-  { "title": "율곡의 법제 개혁론", "year": 2018, "month": "june", "domains": ["humanities", "social"] },
-  { "title": "통화 정책", "year": 2018, "month": "june", "domains": ["social"] },
-  { "title": "DNS 스푸핑", "year": 2018, "month": "june", "domains": ["technology"] },
-
-  { "title": "하이퍼리얼리즘", "year": 2018, "month": "september", "domains": ["arts"] },
-  { "title": "양자 역학", "year": 2018, "month": "september", "domains": ["humanities", "science"] },
-  { "title": "집합 의례", "year": 2018, "month": "september", "domains": ["social"] },
-
-  { "title": "아리스토텔레스의 목적론", "year": 2018, "month": "november", "domains": ["humanities"] },
-  { "title": "오버슈팅", "year": 2018, "month": "november", "domains": ["social"] },
-  { "title": "디지털 통신 시스템과 부호화", "year": 2018, "month": "november", "domains": ["technology"] },
-
-  { "title": "이익과 최한기의 인체관", "year": 2019, "month": "june", "domains": ["humanities"] },
-  { "title": "임의 법규·단속 법규·강행 법규", "year": 2019, "month": "june", "domains": ["social"] },
-  { "title": "LFIA 키트", "year": 2019, "month": "june", "domains": ["science", "technology"] },
-
-  { "title": "CDS 프리미엄", "year": 2019, "month": "september", "domains": ["social"] },
-  { "title": "주사 터널링 현미경(STM)", "year": 2019, "month": "september", "domains": ["technology"] },
-  { "title": "근대 도시에 관한 여러 견해들", "year": 2019, "month": "september", "domains": ["social", "arts"] },
-
-  { "title": "계약과 채무 불이행", "year": 2019, "month": "november", "domains": ["social"] },
-  { "title": "서양과 동양의 우주론 변화", "year": 2019, "month": "november", "domains": ["humanities", "science"] },
-  { "title": "가능세계", "year": 2019, "month": "november", "domains": ["humanities"] },
-
-  { "title": "에피쿠로스의 자연학과 윤리학", "year": 2020, "month": "june", "domains": ["humanities"] },
-  { "title": "미시/거시 건전성", "year": 2020, "month": "june", "domains": ["social"] },
-  { "title": "개체성의 철학적/생물학적 접근", "year": 2020, "month": "june", "domains": ["science"] },
-
-  { "title": "역사와 영화의 관계", "year": 2020, "month": "september", "domains": ["humanities", "arts"] },
-  { "title": "점유와 소유", "year": 2020, "month": "september", "domains": ["social"] },
-  { "title": "위치 측정 기술", "year": 2020, "month": "september", "domains": ["technology"] },
-
-  { "title": "베이즈주의의 조건화 원리", "year": 2020, "month": "november", "domains": ["humanities"] },
-  { "title": "장기 이식과 내인성 레트로바이러스", "year": 2020, "month": "november", "domains": ["science"] },
-  { "title": "국제법과 바젤 협약, BIS 비율", "year": 2020, "month": "november", "domains": ["social"] },
-
-  { "title": "(가) 과거제의 긍정적 영향 / (나) 과거제의 부정적 영향과 개혁론", "year": 2021, "month": "june", "domains": ["humanities"] },
-  { "title": "영상 안정화 기술", "year": 2021, "month": "june", "domains": ["technology"] },
-  { "title": "지식 재산 보호와 디지털세", "year": 2021, "month": "june", "domains": ["social"] },
-
-  { "title": "(가) 미학과 예술의 조건에 대한 견해 변화 / (나) 예술 작품의 비평 방법", "year": 2021, "month": "september", "domains": ["arts"] },
-  { "title": "행정입법의 종류와 특징", "year": 2021, "month": "september", "domains": ["social"] },
-  { "title": "항미생물 화학제의 종류와 작용 기제", "year": 2021, "month": "september", "domains": ["science"] },
-
-  { "title": "(가) 북학론의 2가지 견해 / (나) 18세기 중국의 경제적 상황", "year": 2021, "month": "november", "domains": ["humanities"] },
-  { "title": "예약", "year": 2021, "month": "november", "domains": ["social"] },
-  { "title": "3D 애니메이션 제작 기술(모델링, 렌더링)", "year": 2021, "month": "november", "domains": ["technology"] },
-
-  { "title": "이원론과 동일론", "year": 2022, "month": "june", "domains": ["humanities"] },
-  { "title": "(가) 음악에 대한 <여씨춘추>의 견해 / (나) 조성 음악과 무조 음악", "year": 2022, "month": "june", "domains": ["humanities", "arts"] },
-  { "title": "충전지의 작동 원리", "year": 2022, "month": "june", "domains": ["technology"] },
-
-  { "title": "독서의 의미 구성", "year": 2022, "month": "june", "domains": ["reading"] },
-  { "title": "(가) 새먼의 과정 이론 / (나) 재이론", "year": 2022, "month": "june", "domains": ["humanities"] },
-  { "title": "베카리아의 형벌론", "year": 2022, "month": "june", "domains": ["social"] },
-  { "title": "전통적 PCR와 실시간 PCR의 원리와 특징", "year": 2022, "month": "june", "domains": ["technology"] },
-
-  { "title": "독서의 구체적인 방법", "year": 2022, "month": "september", "domains": ["reading"] },
-  { "title": "(가) 독점적 경쟁 시장에서 광고의 기능 / (나) 다양한 차원에서 광고의 영향", "year": 2022, "month": "september", "domains": ["social"] },
-  { "title": "반자유의지 논증과 비판적 입장", "year": 2022, "month": "september", "domains": ["humanities"] },
-  { "title": "메타버스의 몰입도를 높이는 기술", "year": 2022, "month": "september", "domains": ["technology"] },
-
-  { "title": "독서의 의의", "year": 2022, "month": "november", "domains": ["reading"] },
-  { "title": "(가) 헤겔의 변증법적 분석 / (나) 변증법적 종합과 예술 비판", "year": 2022, "month": "november", "domains": ["humanities"] },
-  { "title": "브레턴우즈 체제", "year": 2022, "month": "november", "domains": ["social"] },
-  { "title": "어라운드 뷰 카메라의 왜곡 보정과 시점 변환", "year": 2022, "month": "november", "domains": ["technology"] },
-
-  { "title": "읽기 능력과 읽기 요소", "year": 2023, "month": "june", "domains": ["reading"] },
-  { "title": "(가) 『신어』 육가의 사상 / (나) 『치평요람』 세종과 편찬자들의 사상", "year": 2023, "month": "june", "domains": ["humanities"] },
-  { "title": "비타민 K의 기능", "year": 2023, "month": "june", "domains": ["science"] },
-  { "title": "이중차분법", "year": 2023, "month": "june", "domains": ["social"] },
-
-  { "title": "눈동자 움직임 분석", "year": 2023, "month": "september", "domains": ["reading"] },
-  { "title": "(가) 아도르노의 미학 이론 / (나) 비판", "year": 2023, "month": "september", "domains": ["arts"] },
-  { "title": "유류분권", "year": 2023, "month": "september", "domains": ["social"] },
-  { "title": "검색 엔진의 웹 페이지 순서 결정", "year": 2023, "month": "september", "domains": ["technology"] },
-
-  { "title": "독서에서의 소통 양상", "year": 2023, "month": "november", "domains": ["reading"] },
-  { "title": "(가) 중국·조선의 유서 편찬 경향 / (나) 조선 후기 실학자들의 유서", "year": 2023, "month": "november", "domains": ["humanities"] },
-  { "title": "법령에서의 불확정성 개념", "year": 2023, "month": "november", "domains": ["social"] },
-  { "title": "클라이버의 기초 대사량 연구", "year": 2023, "month": "november", "domains": ["science"] },
-
-  { "title": "독서 동기", "year": 2024, "month": "june", "domains": ["reading"] },
-  { "title": "공포 소구 이론", "year": 2024, "month": "june", "domains": ["social"] },
-  { "title": "화학 반응과 촉매", "year": 2024, "month": "june", "domains": ["technology"] },
-  { "title": "(가) 확장 인지 이론 / (나) 체험으로서의 지각", "year": 2024, "month": "june", "domains": ["humanities"] },
-
-  { "title": "읽기 발달 단계", "year": 2024, "month": "september", "domains": ["reading"] },
-  { "title": "데이터의 소유권 주체", "year": 2024, "month": "september", "domains": ["social"] },
-  { "title": "초정밀 저울의 작동 원리", "year": 2024, "month": "september", "domains": ["technology"] },
-  { "title": "(가) 신분제의 변화 양상 / (나) 실학자들의 신분제 개혁론", "year": 2024, "month": "september", "domains": ["humanities"] },
-
-  { "title": "초인지", "year": 2024, "month": "november", "domains": ["reading"] },
-  { "title": "경마식 보도", "year": 2024, "month": "november", "domains": ["social"] },
-  { "title": "이상치와 결측치의 처리", "year": 2024, "month": "november", "domains": ["technology"] },
-  { "title": "(가) 『노자』에 대한 한비자의 해석 / (나) 다양한 유학자들의 해석", "year": 2024, "month": "november", "domains": ["humanities"] },
-
-  { "title": "여러 글의 정보를 종합하며 읽기", "year": 2025, "month": "june", "domains": ["reading"] },
-  { "title": "기업 경영에서의 과두제적 경영", "year": 2025, "month": "june", "domains": ["social"] },
-  { "title": "플라스틱의 분자 구조와 형성 원리", "year": 2025, "month": "june", "domains": ["science"] },
-  { "title": "(가) 에이어의 도덕 문장 진리 적합성 / (나) 도덕 문장의 논증 관점", "year": 2025, "month": "june", "domains": ["humanities"] },
-
-  { "title": "시각 자료가 포함된 글 읽기", "year": 2025, "month": "september", "domains": ["reading"] },
-  { "title": "재판매 가격 유지와 부당 광고 규제", "year": 2025, "month": "september", "domains": ["social"] },
-  { "title": "블록체인", "year": 2025, "month": "september", "domains": ["technology"] },
-  { "title": "(가) 바쟁의 영화 이론 / (나) 정신분석학적 영화 이론", "year": 2025, "month": "september", "domains": ["arts"] },
-
-  { "title": "밑줄 긋기", "year": 2025, "month": "november", "domains": ["reading"] },
-  { "title": "(가) 개항 이후 개화 개념의 변화 / (나) 중국의 서양 과학·기술 수용 관점", "year": 2025, "month": "november", "domains": ["humanities"] },
-  { "title": "기계 학습과 확산 모델", "year": 2025, "month": "november", "domains": ["technology"] },
-  { "title": "인터넷 ID와 관련된 명예훼손", "year": 2025, "month": "november", "domains": ["social"] },
-
-  { "title": "동형이의어", "year": 2026, "month": "june", "domains": ["reading"] },
-  { "title": "(가) 여러 가지 법 모델 / (나) 임대차보호법", "year": 2026, "month": "june", "domains": ["social"] },
-  { "title": "수소의 저장 및 추출과 활용", "year": 2026, "month": "june", "domains": ["science"] },
-  { "title": "플로리디의 정보 철학", "year": 2026, "month": "june", "domains": ["humanities"] },
-
-  { "title": "인공지능을 활용한 독서법", "year": 2026, "month": "september", "domains": ["reading"] },
-  { "title": "(가) 영화와 사회의 관계 / (나) SF의 개념과 장르적 특징", "year": 2026, "month": "september", "domains": ["arts"] },
-  { "title": "공공 저널리즘", "year": 2026, "month": "september", "domains": ["social"] },
-  { "title": "오디오 신호 압축", "year": 2026, "month": "september", "domains": ["technology"] }
+  {
+    "title": "인공지능을 활용한 독서법",
+    "year": 2026,
+    "month": 9,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 영화와 사회의 관계 / (나) SF의 개념과 장르적 특징",
+    "year": 2026,
+    "month": 9,
+    "domains": [
+      "arts"
+    ],
+    "number": 2
+  },
+  {
+    "title": "공공 저널리즘",
+    "year": 2026,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  },
+  {
+    "title": "오디오 신호 압축",
+    "year": 2026,
+    "month": 9,
+    "domains": [
+      "technology"
+    ],
+    "number": 4
+  },
+  {
+    "title": "동형이의어",
+    "year": 2026,
+    "month": 6,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 여러 가지 법 모델 / (나) 임대차보호법",
+    "year": 2026,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "수소의 저장 및 추출과 활용",
+    "year": 2026,
+    "month": 6,
+    "domains": [
+      "science"
+    ],
+    "number": 3
+  },
+  {
+    "title": "플로리디의 정보 철학",
+    "year": 2026,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 4
+  },
+  {
+    "title": "밑줄 긋기",
+    "year": 2025,
+    "month": 11,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 개항 이후 개화 개념의 변화 / (나) 중국의 서양 과학·기술 수용 관점",
+    "year": 2025,
+    "month": 11,
+    "domains": [
+      "humanities"
+    ],
+    "number": 2
+  },
+  {
+    "title": "기계 학습과 확산 모델",
+    "year": 2025,
+    "month": 11,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "인터넷 ID와 관련된 명예훼손",
+    "year": 2025,
+    "month": 11,
+    "domains": [
+      "social"
+    ],
+    "number": 4
+  },
+  {
+    "title": "시각 자료가 포함된 글 읽기",
+    "year": 2025,
+    "month": 9,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "재판매 가격 유지와 부당 광고 규제",
+    "year": 2025,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "블록체인",
+    "year": 2025,
+    "month": 9,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 바쟁의 영화 이론 / (나) 정신분석학적 영화 이론",
+    "year": 2025,
+    "month": 9,
+    "domains": [
+      "arts"
+    ],
+    "number": 4
+  },
+  {
+    "title": "여러 글의 정보를 종합하며 읽기",
+    "year": 2025,
+    "month": 6,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "기업 경영에서의 과두제적 경영",
+    "year": 2025,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "플라스틱의 분자 구조와 형성 원리",
+    "year": 2025,
+    "month": 6,
+    "domains": [
+      "science"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 에이어의 도덕 문장 진리 적합성 / (나) 도덕 문장의 논증 관점",
+    "year": 2025,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 4
+  },
+  {
+    "title": "초인지",
+    "year": 2024,
+    "month": 11,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "경마식 보도",
+    "year": 2024,
+    "month": 11,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "이상치와 결측치의 처리",
+    "year": 2024,
+    "month": 11,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 『노자』에 대한 한비자의 해석 / (나) 다양한 유학자들의 해석",
+    "year": 2024,
+    "month": 11,
+    "domains": [
+      "humanities"
+    ],
+    "number": 4
+  },
+  {
+    "title": "읽기 발달 단계",
+    "year": 2024,
+    "month": 9,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "데이터의 소유권 주체",
+    "year": 2024,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "초정밀 저울의 작동 원리",
+    "year": 2024,
+    "month": 9,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 신분제의 변화 양상 / (나) 실학자들의 신분제 개혁론",
+    "year": 2024,
+    "month": 9,
+    "domains": [
+      "humanities"
+    ],
+    "number": 4
+  },
+  {
+    "title": "독서 동기",
+    "year": 2024,
+    "month": 6,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "공포 소구 이론",
+    "year": 2024,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "화학 반응과 촉매",
+    "year": 2024,
+    "month": 6,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 확장 인지 이론 / (나) 체험으로서의 지각",
+    "year": 2024,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 4
+  },
+  {
+    "title": "독서에서의 소통 양상",
+    "year": 2023,
+    "month": 11,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 중국·조선의 유서 편찬 경향 / (나) 조선 후기 실학자들의 유서",
+    "year": 2023,
+    "month": 11,
+    "domains": [
+      "humanities"
+    ],
+    "number": 2
+  },
+  {
+    "title": "법령에서의 불확정성 개념",
+    "year": 2023,
+    "month": 11,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  },
+  {
+    "title": "클라이버의 기초 대사량 연구",
+    "year": 2023,
+    "month": 11,
+    "domains": [
+      "science"
+    ],
+    "number": 4
+  },
+  {
+    "title": "눈동자 움직임 분석",
+    "year": 2023,
+    "month": 9,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 아도르노의 미학 이론 / (나) 비판",
+    "year": 2023,
+    "month": 9,
+    "domains": [
+      "arts"
+    ],
+    "number": 2
+  },
+  {
+    "title": "유류분권",
+    "year": 2023,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  },
+  {
+    "title": "검색 엔진의 웹 페이지 순서 결정",
+    "year": 2023,
+    "month": 9,
+    "domains": [
+      "technology"
+    ],
+    "number": 4
+  },
+  {
+    "title": "읽기 능력과 읽기 요소",
+    "year": 2023,
+    "month": 6,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 『신어』 육가의 사상 / (나) 『치평요람』 세종과 편찬자들의 사상",
+    "year": 2023,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 2
+  },
+  {
+    "title": "비타민 K의 기능",
+    "year": 2023,
+    "month": 6,
+    "domains": [
+      "science"
+    ],
+    "number": 3
+  },
+  {
+    "title": "이중차분법",
+    "year": 2023,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 4
+  },
+  {
+    "title": "독서의 의의",
+    "year": 2022,
+    "month": 11,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 헤겔의 변증법적 분석 / (나) 변증법적 종합과 예술 비판",
+    "year": 2022,
+    "month": 11,
+    "domains": [
+      "humanities"
+    ],
+    "number": 2
+  },
+  {
+    "title": "브레턴우즈 체제",
+    "year": 2022,
+    "month": 11,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  },
+  {
+    "title": "어라운드 뷰 카메라의 왜곡 보정과 시점 변환",
+    "year": 2022,
+    "month": 11,
+    "domains": [
+      "technology"
+    ],
+    "number": 4
+  },
+  {
+    "title": "독서의 구체적인 방법",
+    "year": 2022,
+    "month": 9,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 독점적 경쟁 시장에서 광고의 기능 / (나) 다양한 차원에서 광고의 영향",
+    "year": 2022,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "반자유의지 논증과 비판적 입장",
+    "year": 2022,
+    "month": 9,
+    "domains": [
+      "humanities"
+    ],
+    "number": 3
+  },
+  {
+    "title": "메타버스의 몰입도를 높이는 기술",
+    "year": 2022,
+    "month": 9,
+    "domains": [
+      "technology"
+    ],
+    "number": 4
+  },
+  {
+    "title": "독서의 의미 구성",
+    "year": 2022,
+    "month": 6,
+    "domains": [
+      "reading"
+    ],
+    "number": 1
+  },
+  {
+    "title": "(가) 새먼의 과정 이론 / (나) 재이론",
+    "year": 2022,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 2
+  },
+  {
+    "title": "베카리아의 형벌론",
+    "year": 2022,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  },
+  {
+    "title": "전통적 PCR와 실시간 PCR의 원리와 특징",
+    "year": 2022,
+    "month": 6,
+    "domains": [
+      "technology"
+    ],
+    "number": 4
+  },
+  {
+    "title": "(가) 북학론의 2가지 견해 / (나) 18세기 중국의 경제적 상황",
+    "year": 2021,
+    "month": 11,
+    "domains": [
+      "humanities"
+    ],
+    "number": 1
+  },
+  {
+    "title": "예약",
+    "year": 2021,
+    "month": 11,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "3D 애니메이션 제작 기술(모델링, 렌더링)",
+    "year": 2021,
+    "month": 11,
+    "domains": [
+      "technology"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 미학과 예술의 조건에 대한 견해 변화 / (나) 예술 작품의 비평 방법",
+    "year": 2021,
+    "month": 9,
+    "domains": [
+      "arts"
+    ],
+    "number": 1
+  },
+  {
+    "title": "행정입법의 종류와 특징",
+    "year": 2021,
+    "month": 9,
+    "domains": [
+      "social"
+    ],
+    "number": 2
+  },
+  {
+    "title": "항미생물 화학제의 종류와 작용 기제",
+    "year": 2021,
+    "month": 9,
+    "domains": [
+      "science"
+    ],
+    "number": 3
+  },
+  {
+    "title": "(가) 과거제의 긍정적 영향 / (나) 과거제의 부정적 영향과 개혁론",
+    "year": 2021,
+    "month": 6,
+    "domains": [
+      "humanities"
+    ],
+    "number": 1
+  },
+  {
+    "title": "영상 안정화 기술",
+    "year": 2021,
+    "month": 6,
+    "domains": [
+      "technology"
+    ],
+    "number": 2
+  },
+  {
+    "title": "지식 재산 보호와 디지털세",
+    "year": 2021,
+    "month": 6,
+    "domains": [
+      "social"
+    ],
+    "number": 3
+  }
 ]

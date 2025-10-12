@@ -13,9 +13,6 @@ struct TestListView: View {
             .ignoresSafeArea(.all, edges: .bottom)
             .toolbar(content: toolbarContent)
         }
-        .onAppear {
-            items.sort { $0.year > $1.year }
-        }
     }
     
     private func toolbarContent () -> some View {
@@ -50,7 +47,7 @@ struct TestListView: View {
     
     @ViewBuilder
     private func thumbnailImage(for item: Item) -> some View {
-        if let pdfURL = bundleUrl(for: "20260902", with: "pdf"){
+        if let pdfURL = bundleUrl(for: item.fileName, with: "pdf"){
             TestListPDFPreView(url: pdfURL)
                 .frame(width: 32)
                 .cornerRadius(4)
@@ -105,6 +102,7 @@ struct TestListView: View {
             shareButton(for: item)
         } label: {
             Image(systemName: "ellipsis")
+                .frame(width: 36, height: 36)
         }
     }
 
@@ -112,7 +110,7 @@ struct TestListView: View {
     private func shareButton(for item: Item) -> some View {
         let label = { Label("내보내기", systemImage: "square.and.arrow.up") }
         
-        if let pdfURL = bundleUrl(for: "20260902", with: "pdf") {
+        if let pdfURL = bundleUrl(for: item.fileName, with: "pdf") {
             ShareLink(item: pdfURL, label: label)
         }
     }
