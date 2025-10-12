@@ -44,7 +44,7 @@ struct TestListView: View {
             thumbnailImage(for: item)
             infoText(for: item)
             Spacer(minLength: 12)
-            shareButton(for: item)
+            moreButton(for: item)
         }
     }
     
@@ -100,19 +100,21 @@ struct TestListView: View {
             .font(.headline)
     }
     
-    @ViewBuilder
-    private func shareButton(for item: Item) -> some View {
-        if let pdfURL = bundleUrl(for: "20260902", with: "pdf"){
-            ShareLink(item: pdfURL, label: shareLinkLabel)
-                .buttonStyle(.plain)
+    private func moreButton(for item: Item) -> some View {
+        Menu {
+            shareButton(for: item)
+        } label: {
+            Image(systemName: "ellipsis")
         }
     }
-    
-    private func shareLinkLabel() -> some View {
-        Image(systemName: "square.and.arrow.up")
-            .imageScale(.medium)
-            .foregroundStyle(.blue)
-            .frame(width: 40, height: 40)
-            .background(Material.ultraThin, in: Circle())
+
+    @ViewBuilder
+    private func shareButton(for item: Item) -> some View {
+        let label = { Label("내보내기", systemImage: "square.and.arrow.up") }
+        
+        if let pdfURL = bundleUrl(for: "20260902", with: "pdf") {
+            ShareLink(item: pdfURL, label: label)
+        }
     }
+
 }
