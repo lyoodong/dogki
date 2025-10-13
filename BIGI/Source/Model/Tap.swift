@@ -32,7 +32,7 @@ extension Tap {
         case .test:
             TestListView()
         case .setting:
-            Text("설정")
+            SettingView()
         }
     }
 }

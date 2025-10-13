@@ -13,6 +13,12 @@
 		BE36F0042E9CC0F0007154CB /* TestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36EFFE2E9CC0F0007154CB /* TestListViewModel.swift */; };
 		BE36F0052E9CC0F0007154CB /* TestPDFPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36EFFF2E9CC0F0007154CB /* TestPDFPreView.swift */; };
 		BE36F00A2E9CC362007154CB /* Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0092E9CC362007154CB /* Tap.swift */; };
+		BE36F00E2E9CC575007154CB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F00D2E9CC575007154CB /* SettingView.swift */; };
+		BE36F0102E9CC5C8007154CB /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F00F2E9CC5C8007154CB /* Policy.swift */; };
+		BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0112E9CD510007154CB /* SettingEmailView.swift */; };
+		BE36F0142E9CD55B007154CB /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0132E9CD55B007154CB /* AppInfo.swift */; };
+		BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0152E9CDAAC007154CB /* UserSupport.swift */; };
+		BE36F0182E9CDB04007154CB /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0172E9CDB04007154CB /* Info.swift */; };
 		BE40A6F22E9B913D005997BF /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = BE40A6F12E9B913D005997BF /* test.json */; };
 		BE40A7342E9B918E005997BF /* 20240903.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE40A71A2E9B918E005997BF /* 20240903.pdf */; };
 		BE40A7352E9B918E005997BF /* 20231101.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE40A7102E9B918E005997BF /* 20231101.pdf */; };
@@ -95,6 +101,12 @@
 		BE36EFFE2E9CC0F0007154CB /* TestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListViewModel.swift; sourceTree = "<group>"; };
 		BE36EFFF2E9CC0F0007154CB /* TestPDFPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPDFPreView.swift; sourceTree = "<group>"; };
 		BE36F0092E9CC362007154CB /* Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap.swift; sourceTree = "<group>"; };
+		BE36F00D2E9CC575007154CB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		BE36F00F2E9CC5C8007154CB /* Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
+		BE36F0112E9CD510007154CB /* SettingEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingEmailView.swift; sourceTree = "<group>"; };
+		BE36F0132E9CD55B007154CB /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		BE36F0152E9CDAAC007154CB /* UserSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSupport.swift; sourceTree = "<group>"; };
+		BE36F0172E9CDB04007154CB /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		BE40A6F12E9B913D005997BF /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		BE40A6F32E9B918E005997BF /* 20210601.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20210601.pdf; sourceTree = "<group>"; };
 		BE40A6F42E9B918E005997BF /* 20210602.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20210602.pdf; sourceTree = "<group>"; };
@@ -192,6 +204,15 @@
 				BE36EFFF2E9CC0F0007154CB /* TestPDFPreView.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		BE36F00C2E9CC570007154CB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BE36F00D2E9CC575007154CB /* SettingView.swift */,
+				BE36F0112E9CD510007154CB /* SettingEmailView.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		BE5DAFD52E97C1BF00FFFACB = {
@@ -293,6 +314,10 @@
 				BEB4340C2E98AB6C00756E07 /* Category.swift */,
 				BEB434002E98A7A400756E07 /* Item.swift */,
 				BE36F0092E9CC362007154CB /* Tap.swift */,
+				BE36F00F2E9CC5C8007154CB /* Policy.swift */,
+				BE36F0152E9CDAAC007154CB /* UserSupport.swift */,
+				BE36F0172E9CDB04007154CB /* Info.swift */,
+				BE36F0132E9CD55B007154CB /* AppInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +325,7 @@
 		BEB434022E98A7A400756E07 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE36F00C2E9CC570007154CB /* Setting */,
 				BE36F0002E9CC0F0007154CB /* Test */,
 			);
 			path = View;
@@ -474,14 +500,20 @@
 				BE36F0022E9CC0F0007154CB /* TestDomainFilter.swift in Sources */,
 				BE36F0032E9CC0F0007154CB /* TestListView.swift in Sources */,
 				BE36F0042E9CC0F0007154CB /* TestListViewModel.swift in Sources */,
+				BE36F0102E9CC5C8007154CB /* Policy.swift in Sources */,
+				BE36F0142E9CD55B007154CB /* AppInfo.swift in Sources */,
 				BE36F0052E9CC0F0007154CB /* TestPDFPreView.swift in Sources */,
 				BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */,
 				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
 				BEB434092E98A7A400756E07 /* Month.swift in Sources */,
+				BE36F00E2E9CC575007154CB /* SettingView.swift in Sources */,
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BE36F00A2E9CC362007154CB /* Tap.swift in Sources */,
+				BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
+				BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */,
 				BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */,
+				BE36F0182E9CDB04007154CB /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +661,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.1008.BIGI;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -659,7 +691,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.1008.BIGI;
+				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
