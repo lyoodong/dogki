@@ -24,7 +24,6 @@ struct TestListView: View {
                 banner()
             }
             .animation(.default, value: displayItems)
-            .ignoresSafeArea(.all, edges: .bottom)
             .toolbar(content: toolbarContent)
             .navigationTitle("기출 문제")
             .navigationBarTitleDisplayMode(.inline)

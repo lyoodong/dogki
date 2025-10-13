@@ -11,7 +11,15 @@ import SwiftUI
 struct BIGIApp: App {
     var body: some Scene {
         WindowGroup {
-            TestListView()
+            TabView {
+                ForEach(Tap.allCases) { tap in
+                    Tab(
+                        tap.description,
+                        systemImage: tap.systemImage,
+                        content: {tap.content}
+                    )
+                }
+            }
         }
     }
 }
