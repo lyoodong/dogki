@@ -9,9 +9,9 @@ enum Policy: CaseIterable, CustomStringConvertible, Identifiable {
     var url: String {
         switch self {
         case .term:
-            return "https://example.com/terms"
+            return ServiceURL.term
         case .privacy:
-            return "https://example.com/privacy"
+            return ServiceURL.privacy
         }
     }
     

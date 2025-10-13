@@ -7,13 +7,22 @@ struct SettingView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                userSupportSection()
-                policySection()
-                InfoSection()
+            VStack {
+                List {
+                    userSupportSection()
+                    policySection()
+                    InfoSection()
+                }
+                .navigationTitle("설정")
+                .navigationBarTitleDisplayMode(.inline)
+                
+                Spacer()
+                
+                Text("© 2025 bdnm. All rights reserved.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .padding(.bottom, 6)
             }
-            .navigationTitle("설정")
-            .navigationBarTitleDisplayMode(.inline)
         }
         .sheet(isPresented: $isShowEmail) {
             SettingEmailView(frame: AppInfo.emailFrame)
@@ -85,9 +94,7 @@ struct SettingView: View {
     }
     
     private func onPolicyTapGesture(for item: Policy) {
-        if let url = URL(string: item.url) {
-            openSafari(for: url)
-        }
+        openSafari(for: item.url)
     }
     
     private func onAppInfoTapGesture(for item: Info) {
@@ -98,13 +105,15 @@ struct SettingView: View {
     }
     
     private func openAppStore() {
-        if let url = URL(string: AppInfo.storeUrl) {
+        if let url = URL(string: ServiceURL.store) {
             UIApplication.shared.open(url)
         }
     }
     
-    private func openSafari(for url: URL) {
-        UIApplication.shared.open(url)
+    private func openSafari(for url: String) {
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url)
+        }
     }
     
     private func requestReview() {

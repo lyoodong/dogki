@@ -17,8 +17,8 @@ enum AppInfo {
         "\(UIDevice.current.systemVersion)"
     }
     
-    static var storeUrl: String {
-        "itms-apps://itunes.apple.com/app/7HDHR2SNR7"
+    static var appID: String {
+        "7HDHR2SNR7"
     }
     
     static var emailFrame: EmailFrame {

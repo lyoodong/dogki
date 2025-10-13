@@ -13,7 +13,7 @@ enum UserSupport: CaseIterable, CustomStringConvertible, Identifiable {
         case .review:
             "리뷰 남기기"
         case .email:
-            "요청 사항 보내기"
+            "피드백 보내기"
         }
     }
     
