@@ -19,6 +19,7 @@
 		BE36F0142E9CD55B007154CB /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0132E9CD55B007154CB /* AppInfo.swift */; };
 		BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0152E9CDAAC007154CB /* UserSupport.swift */; };
 		BE36F0182E9CDB04007154CB /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F0172E9CDB04007154CB /* Info.swift */; };
+		BE36F01B2E9CFD9D007154CB /* ServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36F01A2E9CFD9D007154CB /* ServiceURL.swift */; };
 		BE40A6F22E9B913D005997BF /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = BE40A6F12E9B913D005997BF /* test.json */; };
 		BE40A7342E9B918E005997BF /* 20240903.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE40A71A2E9B918E005997BF /* 20240903.pdf */; };
 		BE40A7352E9B918E005997BF /* 20231101.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BE40A7102E9B918E005997BF /* 20231101.pdf */; };
@@ -107,6 +108,7 @@
 		BE36F0132E9CD55B007154CB /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		BE36F0152E9CDAAC007154CB /* UserSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSupport.swift; sourceTree = "<group>"; };
 		BE36F0172E9CDB04007154CB /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		BE36F01A2E9CFD9D007154CB /* ServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceURL.swift; sourceTree = "<group>"; };
 		BE40A6F12E9B913D005997BF /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		BE40A6F32E9B918E005997BF /* 20210601.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20210601.pdf; sourceTree = "<group>"; };
 		BE40A6F42E9B918E005997BF /* 20210602.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20210602.pdf; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				BE36F0152E9CDAAC007154CB /* UserSupport.swift */,
 				BE36F0172E9CDB04007154CB /* Info.swift */,
 				BE36F0132E9CD55B007154CB /* AppInfo.swift */,
+				BE36F01A2E9CFD9D007154CB /* ServiceURL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				BE36F00E2E9CC575007154CB /* SettingView.swift in Sources */,
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BE36F00A2E9CC362007154CB /* Tap.swift in Sources */,
+				BE36F01B2E9CFD9D007154CB /* ServiceURL.swift in Sources */,
 				BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
 				BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */,
@@ -650,12 +654,14 @@
 				DEVELOPMENT_TEAM = 7HDHR2SNR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "독기";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +669,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -680,12 +689,14 @@
 				DEVELOPMENT_TEAM = 7HDHR2SNR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "독기";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -693,6 +704,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
