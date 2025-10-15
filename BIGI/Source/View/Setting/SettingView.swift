@@ -1,5 +1,4 @@
 import SwiftUI
-import StoreKit
 import Firebase
 
 struct SettingView: View {
@@ -128,7 +127,8 @@ struct SettingView: View {
     }
     
     private func requestReview() {
-        let scene = UIApplication.shared.connectedScenes.first as! UIWindowScene
-        AppStore.requestReview(in: scene)
+        if let url = URL(string: ServiceURL.storeReview) {
+            UIApplication.shared.open(url)
+        }
     }
 }
