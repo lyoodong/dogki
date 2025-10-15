@@ -21,6 +21,10 @@ enum AppInfo {
         "7HDHR2SNR7"
     }
     
+    static var storeID: String {
+        "6753966506"
+    }
+    
     static var emailFrame: EmailFrame {
         return .init(
             recipients: ["lyoodong@naver.com"],
