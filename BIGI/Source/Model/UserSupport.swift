@@ -1,6 +1,6 @@
 import Foundation
 
-enum UserSupport: CaseIterable, CustomStringConvertible, Identifiable {
+enum UserSupport: String, CaseIterable, CustomStringConvertible, Identifiable {
     case review
     case email
     

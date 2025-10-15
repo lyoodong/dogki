@@ -1,4 +1,4 @@
-enum Policy: CaseIterable, CustomStringConvertible, Identifiable {
+enum Policy: String, CaseIterable, CustomStringConvertible, Identifiable {
     case term
     case privacy
     

@@ -1,6 +1,6 @@
 import Foundation
 
-enum Info: CaseIterable, CustomStringConvertible, Identifiable {
+enum Info: String, CaseIterable, CustomStringConvertible, Identifiable {
     case version
     
     var id: String {

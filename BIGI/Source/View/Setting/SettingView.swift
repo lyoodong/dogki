@@ -1,5 +1,6 @@
 import SwiftUI
 import StoreKit
+import Firebase
 
 struct SettingView: View {
     @State private var isShowEmail: Bool = false
@@ -27,6 +28,10 @@ struct SettingView: View {
         .sheet(isPresented: $isShowEmail) {
             SettingEmailView(frame: AppInfo.emailFrame)
         }
+        .onAppear {
+            let event = "appear_settingView"
+            Analytics.logEvent(event, parameters: nil)
+        }
     }
     
     private func userSupportSection() -> some View {
@@ -35,6 +40,8 @@ struct SettingView: View {
                 rowContent(for: item.description, systemName: item.systemImage)
                     .onTapGesture {
                         onFeedbackTapGesture(for: item)
+                        let event = "tap_\(item.rawValue)"
+                        Analytics.logEvent(event, parameters: nil)
                     }
             }
         }
@@ -46,6 +53,8 @@ struct SettingView: View {
                 rowContent(for: item.description, systemName: item.systemImage)
                     .onTapGesture {
                         onPolicyTapGesture(for: item)
+                        let event = "tap_\(item.rawValue)"
+                        Analytics.logEvent(event, parameters: nil)
                     }
             }
         }
@@ -57,6 +66,8 @@ struct SettingView: View {
                 rowContent(for: item.description, text: AppInfo.appVersion ,systemName: item.systemImage)
                     .onTapGesture {
                         onAppInfoTapGesture(for: item)
+                        let event = "tap_\(item.rawValue)"
+                        Analytics.logEvent(event, parameters: nil)
                     }
             }
         }

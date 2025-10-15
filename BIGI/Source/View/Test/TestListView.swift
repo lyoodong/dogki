@@ -1,4 +1,5 @@
 import SwiftUI
+import Firebase
 
 struct TestListView: View {
     @State private var items: [Item] = load("test.json")
@@ -11,7 +12,7 @@ struct TestListView: View {
             !Set(item.domains).isDisjoint(with: selectedDomains)
         }
     }
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -21,7 +22,7 @@ struct TestListView: View {
                     list(displayItems)
                 }
                 
-//                banner()
+                //                banner()
             }
             .animation(.default, value: displayItems)
             .toolbar(content: toolbarContent)
@@ -30,28 +31,35 @@ struct TestListView: View {
         }
         .sheet(item: $selectedItem, content: sheetContent)
         .sheet(isPresented: $isPresented, content: filterSheetContent)
+        .onAppear {
+            let event = "appear_testList"
+            Analytics.logEvent(event, parameters: nil)
+        }
     }
-
+    
     private func toolbarContent () -> some View {
         Button {
             isPresented = true
+            let event = "tap_filter"
+            Analytics.logEvent(event, parameters: nil)
+            
         } label: {
             Image(systemName: "line.3.horizontal.decrease")
                 .foregroundStyle(.blue)
         }
     }
-
+    
     private func list(_ items: [Item]) -> some View {
         List(items, id: \.self, rowContent: rowContent)
             .listStyle(.plain)
     }
-
+    
     private func banner() -> some View {
         Rectangle()
             .fill(.blue)
             .frame(height: 52)
     }
-
+    
     private func rowContent(_ item: Item) -> some View {
         HStack(alignment: .center) {
             thumbnailImage(for: item)
@@ -61,9 +69,22 @@ struct TestListView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .contentShape(Rectangle())
-        .onTapGesture { selectedItem = item }
+        .onTapGesture {
+            selectedItem = item
+            let event = "tap_testListItem"
+            let parameters: [String : Any] = [
+                "id" : item.id,
+                "title" : item.title,
+                "subtitle" : item.subtitle,
+                "month" : item.month.rawValue,
+                "year" : item.year,
+                "domains" : item.domains.map{ $0.description }.joined()
+            ]
+            
+            Analytics.logEvent(event, parameters: parameters)
+        }
     }
-
+    
     @ViewBuilder
     private func thumbnailImage(for item: Item) -> some View {
         if let pdfURL = bundleUrl(for: item.id, with: "pdf") {
@@ -72,27 +93,27 @@ struct TestListView: View {
                 .cornerRadius(4)
         }
     }
-
+    
     private func infoText(for item: Item) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             subHeadLine(item)
             headLine(item)
         }
     }
-
+    
     private func subHeadLine(_ item: Item) -> some View {
         HStack {
             subTitle(item.subtitle)
             domains(item.domains)
         }
     }
-
+    
     private func subTitle(_ text: String) -> some View {
         Text(text)
             .foregroundStyle(.secondary)
             .font(.subheadline)
     }
-
+    
     private func domains(_ domains: [Domain]) -> some View {
         HStack(spacing: 6) {
             ForEach(domains, id: \.self) { domain in
@@ -106,22 +127,35 @@ struct TestListView: View {
             }
         }
     }
-
+    
     private func headLine(_ item: Item) -> some View {
         Text(item.title)
             .font(.headline)
             .lineLimit(2)
     }
-
+    
     private func moreButton(for item: Item) -> some View {
         Menu {
             shareButton(for: item)
+                .onTapGesture {
+                    let event = "tap_shareButton"
+                    let parameters: [String : Any] = [
+                        "id" : item.id,
+                        "title" : item.title,
+                        "subtitle" : item.subtitle,
+                        "month" : item.month.rawValue,
+                        "year" : item.year,
+                        "domains" : item.domains.map{ $0.description }.joined()
+                    ]
+                    
+                    Analytics.logEvent(event, parameters: parameters)
+                }
         } label: {
             Image(systemName: "ellipsis")
                 .frame(width: 36, height: 36)
         }
     }
-
+    
     @ViewBuilder
     private func shareButton(for item: Item) -> some View {
         let label = { Label("내보내기", systemImage: "square.and.arrow.up") }
