@@ -21,7 +21,7 @@ struct TestListView: View {
                     list(displayItems)
                 }
                 
-                banner()
+//                banner()
             }
             .animation(.default, value: displayItems)
             .toolbar(content: toolbarContent)
