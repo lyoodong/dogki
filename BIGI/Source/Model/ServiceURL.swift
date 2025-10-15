@@ -16,4 +16,8 @@ enum ServiceURL {
     static var privacy: String {
         "https://bdnmco.github.io/dokgi-privacy/"
     }
+    
+    static var openChat: String {
+        "https://open.kakao.com/o/s97FcnXh"
+    }
 }

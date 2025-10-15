@@ -1,9 +1,9 @@
 import SwiftUI
+import MessageUI
 import Firebase
 
 struct SettingView: View {
     @State private var isShowEmail: Bool = false
-    @State private var isShowVersionAlert: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -18,7 +18,7 @@ struct SettingView: View {
                 
                 Spacer()
                 
-                Text("© 2025 bdnm. All rights reserved.")
+                Text("© bdnm. All rights reserved.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .padding(.bottom, 6)
@@ -73,7 +73,7 @@ struct SettingView: View {
     }
     
     @ViewBuilder
-    private func rowContent(for title: String, text: String? = nil, systemName: String,) -> some View {
+    private func rowContent(for title: String, text: String? = nil, systemName: String) -> some View {
         HStack(spacing: 16) {
             Image(systemName: systemName)
                 .foregroundStyle(.blue)
@@ -99,7 +99,7 @@ struct SettingView: View {
         case .review:
             requestReview()
         case .email:
-            isShowEmail = true
+            requestEmail()
         }
     }
     
@@ -123,6 +123,14 @@ struct SettingView: View {
     private func openSafari(for url: String) {
         if let url = URL(string: url) {
             UIApplication.shared.open(url)
+        }
+    }
+    
+    private func requestEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            isShowEmail = true
+        } else {
+            openSafari(for: ServiceURL.openChat)
         }
     }
     
