@@ -99,7 +99,7 @@
 		BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4340C2E98AB6C00756E07 /* Category.swift */; };
 		BEB434152E98AF6A00756E07 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434142E98AF6A00756E07 /* Load.swift */; };
 		BED03C942EA0BFF0005AFDA6 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BED03C932EA0BFF0005AFDA6 /* GoogleMobileAds */; };
-		BED03C962EA0C2A6005AFDA6 /* TestListAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */; };
+		BED03C962EA0C2A6005AFDA6 /* NativeAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED03C952EA0C2A6005AFDA6 /* NativeAdLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +194,7 @@
 		BEB4340C2E98AB6C00756E07 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BEB434142E98AF6A00756E07 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
 		BED03C912EA0BF44005AFDA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListAdsView.swift; sourceTree = "<group>"; };
+		BED03C952EA0C2A6005AFDA6 /* NativeAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 				BE36EFFD2E9CC0F0007154CB /* TestListView.swift */,
 				BE36EFFE2E9CC0F0007154CB /* TestListViewModel.swift */,
 				BE36EFFF2E9CC0F0007154CB /* TestPDFPreView.swift */,
-				BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */,
+				BED03C952EA0C2A6005AFDA6 /* NativeAdLoader.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -544,7 +544,7 @@
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BE36F00A2E9CC362007154CB /* Tap.swift in Sources */,
 				BE36F01B2E9CFD9D007154CB /* ServiceURL.swift in Sources */,
-				BED03C962EA0C2A6005AFDA6 /* TestListAdsView.swift in Sources */,
+				BED03C962EA0C2A6005AFDA6 /* NativeAdLoader.swift in Sources */,
 				BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
 				BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */,
