@@ -98,6 +98,8 @@
 		BEB4340A2E98A7A400756E07 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434002E98A7A400756E07 /* Item.swift */; };
 		BEB4340D2E98AB6C00756E07 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4340C2E98AB6C00756E07 /* Category.swift */; };
 		BEB434152E98AF6A00756E07 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB434142E98AF6A00756E07 /* Load.swift */; };
+		BED03C942EA0BFF0005AFDA6 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BED03C932EA0BFF0005AFDA6 /* GoogleMobileAds */; };
+		BED03C962EA0C2A6005AFDA6 /* TestListAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +185,7 @@
 		BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIGI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8C69402E9F822300D71FE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE8C694A2E9F82BB00D71FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE9F10802EA081D9000F93CD /* BIGI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BIGI.entitlements; sourceTree = "<group>"; };
 		BEB433FB2E98A7A400756E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB433FC2E98A7A400756E07 /* BIGIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIGIApp.swift; sourceTree = "<group>"; };
 		BEB433FE2E98A7A400756E07 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 		BEB434002E98A7A400756E07 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BEB4340C2E98AB6C00756E07 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BEB434142E98AF6A00756E07 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
+		BED03C912EA0BF44005AFDA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListAdsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED03C942EA0BFF0005AFDA6 /* GoogleMobileAds in Frameworks */,
 				BE8C69522E9F874B00D71FE7 /* FirebaseRemoteConfig in Frameworks */,
 				BE8C694E2E9F874B00D71FE7 /* FirebaseAnalytics in Frameworks */,
 				BE8C69502E9F874B00D71FE7 /* FirebaseCrashlytics in Frameworks */,
@@ -214,6 +220,7 @@
 				BE36EFFD2E9CC0F0007154CB /* TestListView.swift */,
 				BE36EFFE2E9CC0F0007154CB /* TestListViewModel.swift */,
 				BE36EFFF2E9CC0F0007154CB /* TestPDFPreView.swift */,
+				BED03C952EA0C2A6005AFDA6 /* TestListAdsView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 		BEB434052E98A7A400756E07 /* BIGI */ = {
 			isa = PBXGroup;
 			children = (
+				BED03C912EA0BF44005AFDA6 /* Info.plist */,
+				BE9F10802EA081D9000F93CD /* BIGI.entitlements */,
 				BE8C694A2E9F82BB00D71FE7 /* AppDelegate.swift */,
 				BE8C69402E9F822300D71FE7 /* GoogleService-Info.plist */,
 				BEB433FD2E98A7A400756E07 /* App */,
@@ -393,6 +402,7 @@
 				BE8C694D2E9F874B00D71FE7 /* FirebaseAnalytics */,
 				BE8C694F2E9F874B00D71FE7 /* FirebaseCrashlytics */,
 				BE8C69512E9F874B00D71FE7 /* FirebaseRemoteConfig */,
+				BED03C932EA0BFF0005AFDA6 /* GoogleMobileAds */,
 			);
 			productName = BIGI;
 			productReference = BE5DAFDE2E97C1BF00FFFACB /* BIGI.app */;
@@ -424,6 +434,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				BE8C694C2E9F874B00D71FE7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BED03C922EA0BFF0005AFDA6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BE5DAFDF2E97C1BF00FFFACB /* Products */;
@@ -533,6 +544,7 @@
 				BEB4340A2E98A7A400756E07 /* Item.swift in Sources */,
 				BE36F00A2E9CC362007154CB /* Tap.swift in Sources */,
 				BE36F01B2E9CFD9D007154CB /* ServiceURL.swift in Sources */,
+				BED03C962EA0C2A6005AFDA6 /* TestListAdsView.swift in Sources */,
 				BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
 				BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */,
@@ -668,14 +680,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BIGI/BIGI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7HDHR2SNR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BIGI/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "독기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 맞춤형 광고와 서비스 개선을 위해 기기 식별자를 사용합니다. 추적을 허용하면 최적화된 사용자 경험을 제공합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -689,6 +705,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -703,14 +720,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BIGI/BIGI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7HDHR2SNR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BIGI/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "독기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 맞춤형 광고와 서비스 개선을 위해 기기 식별자를 사용합니다. 추적을 허용하면 최적화된 사용자 경험을 제공합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -724,6 +745,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.bdnm.dokgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -765,6 +787,14 @@
 				minimumVersion = 12.4.0;
 			};
 		};
+		BED03C922EA0BFF0005AFDA6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -782,6 +812,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BE8C694C2E9F874B00D71FE7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		BED03C932EA0BFF0005AFDA6 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BED03C922EA0BFF0005AFDA6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
