@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE25B1102EA4F9B000C17F31 /* NativeAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25B10F2EA4F9B000C17F31 /* NativeAdViewModel.swift */; };
+		BE25B1122EA4F9B800C17F31 /* NativeAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25B1112EA4F9B800C17F31 /* NativeAdsView.swift */; };
 		BE36F0012E9CC0F0007154CB /* TestDFThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36EFFB2E9CC0F0007154CB /* TestDFThumbnailView.swift */; };
 		BE36F0022E9CC0F0007154CB /* TestDomainFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36EFFC2E9CC0F0007154CB /* TestDomainFilter.swift */; };
 		BE36F0032E9CC0F0007154CB /* TestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36EFFD2E9CC0F0007154CB /* TestListView.swift */; };
@@ -103,6 +105,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE25B10F2EA4F9B000C17F31 /* NativeAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewModel.swift; sourceTree = "<group>"; };
+		BE25B1112EA4F9B800C17F31 /* NativeAdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdsView.swift; sourceTree = "<group>"; };
 		BE36EFFB2E9CC0F0007154CB /* TestDFThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDFThumbnailView.swift; sourceTree = "<group>"; };
 		BE36EFFC2E9CC0F0007154CB /* TestDomainFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDomainFilter.swift; sourceTree = "<group>"; };
 		BE36EFFD2E9CC0F0007154CB /* TestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestListView.swift; sourceTree = "<group>"; };
@@ -212,6 +216,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE25B10E2EA4F9A800C17F31 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BE25B10F2EA4F9B000C17F31 /* NativeAdViewModel.swift */,
+				BE25B1112EA4F9B800C17F31 /* NativeAdsView.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		BE36F0002E9CC0F0007154CB /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +367,7 @@
 		BEB434042E98A7A400756E07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BE25B10E2EA4F9A800C17F31 /* Service */,
 				BEB434112E98ACE000756E07 /* Data */,
 				BEB434012E98A7A400756E07 /* Model */,
 				BEB434022E98A7A400756E07 /* View */,
@@ -538,6 +552,7 @@
 				BE36F0052E9CC0F0007154CB /* TestPDFPreView.swift in Sources */,
 				BEB434072E98A7A400756E07 /* BIGIApp.swift in Sources */,
 				BE8C694B2E9F82BB00D71FE7 /* AppDelegate.swift in Sources */,
+				BE25B1122EA4F9B800C17F31 /* NativeAdsView.swift in Sources */,
 				BEB434082E98A7A400756E07 /* Domain.swift in Sources */,
 				BEB434092E98A7A400756E07 /* Month.swift in Sources */,
 				BE36F00E2E9CC575007154CB /* SettingView.swift in Sources */,
@@ -545,6 +560,7 @@
 				BE36F00A2E9CC362007154CB /* Tap.swift in Sources */,
 				BE36F01B2E9CFD9D007154CB /* ServiceURL.swift in Sources */,
 				BED03C962EA0C2A6005AFDA6 /* NativeAdLoader.swift in Sources */,
+				BE25B1102EA4F9B000C17F31 /* NativeAdViewModel.swift in Sources */,
 				BE36F0122E9CD510007154CB /* SettingEmailView.swift in Sources */,
 				BEB434152E98AF6A00756E07 /* Load.swift in Sources */,
 				BE36F0162E9CDAAC007154CB /* UserSupport.swift in Sources */,
