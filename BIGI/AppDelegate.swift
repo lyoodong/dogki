@@ -8,7 +8,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         MobileAds.shared.start()
-        MobileAds.shared.requestConfiguration.testDeviceIdentifiers = [ "410a69826223a2ad58ebf914fb5e8c8e" ]
+//        MobileAds.shared.requestConfiguration.testDeviceIdentifiers = [ "410a69826223a2ad58ebf914fb5e8c8e" ]
 
         return true
     }

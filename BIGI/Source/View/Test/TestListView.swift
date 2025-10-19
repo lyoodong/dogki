@@ -7,6 +7,8 @@ struct TestListView: View {
     @State private var selectedDomains: Set<Domain> = Set(Domain.allCases)
     @State private var isPresented: Bool = false
     
+    @StateObject private var nativeViewModel = NativeAdViewModel(style: .listItem)
+    
     private var displayItems: [Item] {
         return items.filter { item in
             !Set(item.domains).isDisjoint(with: selectedDomains)
@@ -16,15 +18,20 @@ struct TestListView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                if !nativeViewModel.isLoading && !nativeViewModel.isEmptyAds {
+                    NativeAdsView(nativeViewModel: nativeViewModel)
+                        .padding(.horizontal, 16)
+                        .frame(height: 80)
+                }
+                
                 if displayItems.isEmpty {
                     EmptyListView()
                 } else {
                     list(displayItems)
                 }
-                
-                //                banner()
             }
             .animation(.default, value: displayItems)
+            .animation(.default, value: nativeViewModel.isLoading)
             .toolbar(content: toolbarContent)
             .navigationTitle("기출 문제")
             .navigationBarTitleDisplayMode(.inline)
@@ -32,8 +39,10 @@ struct TestListView: View {
         .sheet(item: $selectedItem, content: sheetContent)
         .sheet(isPresented: $isPresented, content: filterSheetContent)
         .onAppear {
+            print("Debugs, onAppear")
             let event = "appear_testList"
             Analytics.logEvent(event, parameters: nil)
+            nativeViewModel.refreshAd()
         }
     }
     
@@ -53,6 +62,7 @@ struct TestListView: View {
         List(items, id: \.self, rowContent: rowContent)
             .listStyle(.plain)
     }
+    
     
     private func banner() -> some View {
         Rectangle()
