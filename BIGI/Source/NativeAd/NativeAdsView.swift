@@ -4,12 +4,12 @@ import GoogleMobileAds
 public struct NativeAdsView: UIViewRepresentable {
     public typealias UIViewType = NativeAdView
     
-    @ObservedObject var nativeViewModel: NativeAdViewModel
+    @State private var nativeAd: NativeAd
     private var style: NativeAdStyle
     
-    init(nativeViewModel: NativeAdViewModel) {
-        self.nativeViewModel = nativeViewModel
-        self.style = nativeViewModel.style
+    init(nativeAd: NativeAd, style: NativeAdStyle) {
+        self.nativeAd = nativeAd
+        self.style = style
     }
     
     public func makeUIView(context: Context) -> NativeAdView {
@@ -25,8 +25,6 @@ public struct NativeAdsView: UIViewRepresentable {
     }
     
     public func updateUIView(_ nativeAdView: NativeAdView, context: Context) {
-        guard let nativeAd = nativeViewModel.nativeAd else { return }
-        
         // headline require
         (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
         

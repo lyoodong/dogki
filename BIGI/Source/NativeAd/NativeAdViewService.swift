@@ -1,7 +1,11 @@
 import SwiftUI
 import GoogleMobileAds
 
-public class NativeAdViewModel: NSObject, ObservableObject, NativeAdLoaderDelegate {
+// cachedAds를 배열로 변경
+// Static이던 것을 지역 변수로 변경
+
+
+public class NativeAdService: NSObject, ObservableObject, NativeAdLoaderDelegate {
     @Published public var nativeAd: NativeAd?
     @Published public var isLoading: Bool = false
     private var adLoader: AdLoader!
@@ -9,19 +13,21 @@ public class NativeAdViewModel: NSObject, ObservableObject, NativeAdLoaderDelega
     private(set)  var style: NativeAdStyle
     private var lastRequestTime: Date?
     public var requestInterval: Int
-    private static var cachedAds: [String: NativeAd] = [:]
+    private var numberOfAds: Int
+//    private static var cachedAds: [String: NativeAd] = [:]
+    private var cachedAds: [NativeAd] = []
     private static var lastRequestTimes: [String: Date] = [:]
     
     var isEmptyAds: Bool {
         return nativeAd == nil
     }
 
-    init(style: NativeAdStyle, requestInterval: Int = 1 * 60) {
+    init(style: NativeAdStyle, requestInterval: Int = 1 * 60, numberOfAds: Int = 1) {
         self.style = style
         self.adUnitID = style.adUnitID
         self.requestInterval = requestInterval
-        self.nativeAd = NativeAdViewModel.cachedAds[adUnitID]
-        self.lastRequestTime = NativeAdViewModel.lastRequestTimes[adUnitID]
+        self.numberOfAds = numberOfAds
+        self.lastRequestTime = NativeAdService.lastRequestTimes[adUnitID]
     }
 
     public func refreshAd() {
@@ -39,12 +45,15 @@ public class NativeAdViewModel: NSObject, ObservableObject, NativeAdLoaderDelega
 
         isLoading = true
         lastRequestTime = now
-        NativeAdViewModel.lastRequestTimes[adUnitID] = now
+        NativeAdService.lastRequestTimes[adUnitID] = now
 
         let adViewOptions = NativeAdViewAdOptions()
         adViewOptions.preferredAdChoicesPosition = .topRightCorner
         
-        adLoader = AdLoader(adUnitID: adUnitID, rootViewController: nil, adTypes: [.native], options: [adViewOptions])
+        let multipleAdsAdLoaderOptions = MultipleAdsAdLoaderOptions()
+        multipleAdsAdLoaderOptions.numberOfAds = numberOfAds
+        
+        adLoader = AdLoader(adUnitID: adUnitID, rootViewController: nil, adTypes: [.native], options: [adViewOptions, multipleAdsAdLoaderOptions])
         adLoader.delegate = self
         adLoader.load(Request())
     }
@@ -53,8 +62,12 @@ public class NativeAdViewModel: NSObject, ObservableObject, NativeAdLoaderDelega
         self.nativeAd = nativeAd
         nativeAd.delegate = self
         self.isLoading = false
-        NativeAdViewModel.cachedAds[adUnitID] = nativeAd
+        self.cachedAds.append(nativeAd)
         nativeAd.mediaContent.videoController.delegate = self
+    }
+    
+    public func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
+        print("\(adLoader) adLoaderDidFinishLoading")
     }
 
     public func adLoader(_ adLoader: AdLoader, didFailToReceiveAdWithError error: Error) {
@@ -63,7 +76,7 @@ public class NativeAdViewModel: NSObject, ObservableObject, NativeAdLoaderDelega
     }
 }
 
-extension NativeAdViewModel: VideoControllerDelegate {
+extension NativeAdService: VideoControllerDelegate {
     // GADVideoControllerDelegate methods
     public func videoControllerDidPlayVideo(_ videoController: VideoController) {
         // Implement this method to receive a notification when the video controller
@@ -92,7 +105,7 @@ extension NativeAdViewModel: VideoControllerDelegate {
 }
 
 // MARK: - NativeAdDelegate
-extension NativeAdViewModel: NativeAdDelegate {
+extension NativeAdService: NativeAdDelegate {
     public func nativeAdDidRecordClick(_ nativeAd: NativeAd) {
         print("\(#function) called")
     }
