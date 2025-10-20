@@ -7,14 +7,14 @@ struct TestListView: View {
     @State private var selectedDomains: Set<Domain> = Set(Domain.allCases)
     @State private var isPresented: Bool = false
     
-    @StateObject private var nativeViewService = NativeAdService(adUnitID: NativeAdStyle.listItem.adUnitID, numberOfAds: 3)
+    @StateObject private var nativeViewService = NativeAdService(adUnitID: NativeAdStyle.listItem.adUnitID, requestInterval: 5, numberOfAds: 4)
     
     private var displayItems: [TestListRow] {
         var rows: [TestListRow] = []
         let filtered = items.filter { !Set($0.domains).isDisjoint(with: selectedDomains) }
         
         let totalCount = items.count
-        let adInterval = totalCount / 3
+        let adInterval = totalCount / 4
         let adPositions = stride(from: 0, to: totalCount, by: adInterval)
         var adIndex = 0
         
@@ -53,6 +53,7 @@ struct TestListView: View {
             let event = "appear_testList"
             Analytics.logEvent(event, parameters: nil)
             nativeViewService.refreshAd()
+            nativeViewService.refreshAdIndex()
         }
     }
     
@@ -87,13 +88,13 @@ struct TestListView: View {
         if !nativeViewService.isLoading,
            index < nativeViewService.cachedAds.count {
             NativeAdsView(nativeAd: nativeViewService.cachedAds[index], style: .listItem)
+                .id(UUID())
                 .frame(height: 80)
                 .padding(.horizontal, 16)
         } else {
             EmptyView()
         }
     }
-
     
     private func rowContent(_ item: Item) -> some View {
         HStack(alignment: .center) {

@@ -9,13 +9,11 @@ public class NativeAdService: NSObject, ObservableObject, NativeAdLoaderDelegate
     private var lastRequestTime: Date?
     public var requestInterval: Int
     private var numberOfAds: Int
-    private static var lastRequestTimes: [String: Date] = [:]
 
-    init(adUnitID: String, requestInterval: Int = 1 * 60, numberOfAds: Int = 1) {
+    init(adUnitID: String, requestInterval: Int = 1, numberOfAds: Int = 1) {
         self.adUnitID = adUnitID
-        self.requestInterval = requestInterval
+        self.requestInterval = requestInterval * 60
         self.numberOfAds = numberOfAds
-        self.lastRequestTime = NativeAdService.lastRequestTimes[adUnitID]
     }
 
     public func refreshAd() {
@@ -33,7 +31,6 @@ public class NativeAdService: NSObject, ObservableObject, NativeAdLoaderDelegate
 
         isLoading = true
         lastRequestTime = now
-        NativeAdService.lastRequestTimes[adUnitID] = now
 
         let adViewOptions = NativeAdViewAdOptions()
         adViewOptions.preferredAdChoicesPosition = .topRightCorner
@@ -44,6 +41,12 @@ public class NativeAdService: NSObject, ObservableObject, NativeAdLoaderDelegate
         adLoader = AdLoader(adUnitID: adUnitID, rootViewController: nil, adTypes: [.native], options: [adViewOptions, multipleAdsAdLoaderOptions])
         adLoader.delegate = self
         adLoader.load(Request())
+    }
+    
+    public func refreshAdIndex() {
+        guard cachedAds.count > 1 else { return }
+        let first = cachedAds.removeFirst()
+        cachedAds.append(first)
     }
 
     public func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
