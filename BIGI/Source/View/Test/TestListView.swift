@@ -29,7 +29,7 @@ struct TestListView: View {
         
         return rows
     }
-
+    
     
     var body: some View {
         NavigationStack {
@@ -49,7 +49,6 @@ struct TestListView: View {
         .sheet(item: $selectedItem, content: sheetContent)
         .sheet(isPresented: $isPresented, content: filterSheetContent)
         .onAppear {
-            print("Debugs, onAppear")
             let event = "appear_testList"
             Analytics.logEvent(event, parameters: nil)
             nativeViewService.refreshAd()

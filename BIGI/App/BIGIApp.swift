@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppTrackingTransparency
 
 @main
 struct BIGIApp: App {
@@ -22,6 +23,19 @@ struct BIGIApp: App {
                     )
                 }
             }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    setUpTrackingAuthorization()
+                }
+            }
+        }
+    }
+    
+    private func setUpTrackingAuthorization() {
+        if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
+            ATTrackingManager.requestTrackingAuthorization { _ in }
         }
     }
 }
+
+
