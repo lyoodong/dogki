@@ -48,10 +48,16 @@ public class NativeAdService: NSObject, ObservableObject, NativeAdLoaderDelegate
 
     public func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
         nativeAd.delegate = self
-        self.isLoading = false
-        self.cachedAds.append(nativeAd)
         nativeAd.mediaContent.videoController.delegate = self
+        isLoading = false
+        
+        if cachedAds.count >= numberOfAds {
+            cachedAds.removeFirst()
+        }
+        
+        cachedAds.append(nativeAd)
     }
+
     
     public func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
         print("\(adLoader) adLoaderDidFinishLoading")
