@@ -21,25 +21,23 @@ class NativeListItemView: NativeAdView {
         self.bodyView = bodyLabel
         
         adTag.withWidth(20)
-        adTag.backgroundColor = .orange
+        adTag.backgroundColor = .blue
         adTag.layer.cornerRadius = 2
         adTag.clipsToBounds = true
         
-        // config 1:1
         iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor, multiplier: 1).isActive = true
-        iconImageView.layer.cornerRadius = 4
         iconImageView.clipsToBounds = true
         
         headlineLabel.numberOfLines = 1
-        headlineLabel.lineBreakMode = .byWordWrapping
+        headlineLabel.lineBreakMode = .byTruncatingTail
         
         bodyLabel.numberOfLines = 2
         bodyLabel.lineBreakMode = .byWordWrapping
         
-        let headerStack = hstack(headlineLabel, adTag)
-        let leftStack = stack(headerStack, bodyLabel)
+        let headerStack = hstack(adTag, headlineLabel, spacing: 4)
+        let leftStack = stack(headerStack, bodyLabel, spacing: 8)
         
-        hstack(leftStack, iconImageView, spacing: 8).withMargins(.allSides(8))
+        hstack(iconImageView, leftStack, spacing: 8, alignment: .center)
     }
     
     required init?(coder aDecoder: NSCoder) {

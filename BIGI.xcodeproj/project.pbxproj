@@ -228,8 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				BE25B10F2EA4F9B000C17F31 /* NativeAdService.swift */,
-				BE25B1172EA4FBC300C17F31 /* NativeListItemView.swift */,
 				BE25B1112EA4F9B800C17F31 /* NativeAdsView.swift */,
+				BE25B1172EA4FBC300C17F31 /* NativeListItemView.swift */,
 			);
 			path = NativeAd;
 			sourceTree = "<group>";

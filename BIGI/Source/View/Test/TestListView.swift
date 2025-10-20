@@ -90,7 +90,6 @@ struct TestListView: View {
             NativeAdsView(nativeAd: nativeViewService.cachedAds[index], style: .listItem)
                 .id(UUID())
                 .frame(height: 80)
-                .padding(.horizontal, 16)
         } else {
             EmptyView()
         }
