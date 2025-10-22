@@ -14,7 +14,7 @@
 
 > 기술 스택
 - **언어**: Swift
-- **프레임워크**: SwiftUI,
+- **프레임워크**: SwiftUI
 - **Package Dependencies**: Firebase, GoogleMobileAds, LBTATools
 ---
 
