@@ -46,8 +46,6 @@
 
 **Result**
 
-- 불필요한 DB 연산 제거, **마지막으로 방출한 값만 DB에 저장**
-
 ```swift
 // NativeAdService
 
